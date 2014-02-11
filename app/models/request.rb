@@ -12,12 +12,12 @@ class Request < ActiveRecord::Base
       })
   end
 
-  def sleep_on_date(date = "today")
-    (client.sleep_on_date(date)["summary"]["totalMinutesAsleep"]) / 60
+  def sleep_on_date(date)
+    (client.sleep_on_date(DateTime.parse(date))["summary"]["totalMinutesAsleep"]) / 60
   end
 
-  def steps_on_date(date = "today")
-    client.activities_on_date(date)["summary"]["steps"]
+  def steps_on_date(date)
+    client.activities_on_date(DateTime.parse(date))["summary"]["steps"]
   end
 
 end

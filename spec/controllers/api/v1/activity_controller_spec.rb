@@ -16,7 +16,8 @@ def valid_params
     { 
       token: ENV["USER_TOKEN"],
       secret: ENV["USER_SECRET"],
-      uid: ENV["USER_UID"]
+      uid: ENV["USER_UID"],
+      date: DateTime.now
     }
   }
 end
