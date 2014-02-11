@@ -46,6 +46,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'hashie'
   gem 'database_cleaner'
+  gem 'pry'
 end
 
 group :test do

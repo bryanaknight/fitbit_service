@@ -4,7 +4,7 @@ class Api::V1::ActivityController < ApplicationController
   def index
     # binding.pry
     @information = Request.new(valid_params)
-    render json: { 
+    render json: {
       sleep_on_date: @information.sleep_on_date(valid_params["date"]),
       steps_on_date: @information.steps_on_date(valid_params["date"]),
       status: "success",
